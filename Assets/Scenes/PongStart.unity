@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 363885982}
   - component: {fileID: 363885981}
   - component: {fileID: 363885984}
+  - component: {fileID: 363885985}
   m_Layer: 0
   m_Name: PaddleRight
   m_TagString: Untagged
@@ -231,6 +232,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 0
+--- !u!114 &363885985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363885979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dac4afd1ba062944852531665d3d70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  paddle: {fileID: 363885980}
 --- !u!1 &587247138
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +520,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 789387647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6af061ffe74a814a8f7fb7d9b7a79d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5565584e73b44f04e94abc26956f2e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &789387649
@@ -980,6 +995,7 @@ GameObject:
   - component: {fileID: 2013995983}
   - component: {fileID: 2013995982}
   - component: {fileID: 2013995985}
+  - component: {fileID: 2013995986}
   m_Layer: 0
   m_Name: PaddleLeft
   m_TagString: Untagged
@@ -1077,6 +1093,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 0
+--- !u!114 &2013995986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013995980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dac4afd1ba062944852531665d3d70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  paddle: {fileID: 2013995981}
 --- !u!1 &2014933750
 GameObject:
   m_ObjectHideFlags: 0
