@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ball : MonoBehaviour
 {
-    int modifier = 10;
+    int modifier = 115;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Rigidbody ball = transform.gameObject.GetComponent<Rigidbody>();
-        ball.AddForce(Vector3.right * modifier);
+        ball.velocity = Vector3.right * modifier * Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -21,16 +21,43 @@ public class ball : MonoBehaviour
     {
         Rigidbody ball = transform.gameObject.GetComponent<Rigidbody>();
         Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
-        if (collision.gameObject.name == "PaddleRight")
+
+        if (collision.gameObject.name == "PaddleRight") // if ball hits right
         {
-            Debug.Log("Right paddle collision");
-            ball.AddForce(Vector3.left * modifier);
+            if (ball.transform.position.z > rb.transform.position.z)
+            {
+                Vector3 launchAngle = new Vector3(1, 0, 1) * modifier * Time.deltaTime;
+                //Debug.Log("High");
+                //ball.AddForce(launchAngle);
+                ball.velocity = launchAngle;
+            }
+            if (ball.transform.position.z <= rb.transform.position.z)
+            {
+                Vector3 launchAngle = new Vector3(1, 0, -1) * modifier * Time.deltaTime;
+                //Debug.Log("Low");
+                //ball.AddForce(launchAngle);
+                ball.velocity = launchAngle;
+            }
         }
-        if (collision.gameObject.name == "PaddleLeft")
+
+        if (collision.gameObject.name == "PaddleLeft") // if ball hits left paddle
         {
-            Debug.Log("Left paddle collision");
-            ball.AddForce(Vector3.right * modifier);
+            if (ball.transform.position.z > rb.transform.position.z)
+            {
+                Vector3 launchAngle = new Vector3(-1, 0, 1) * modifier * Time.deltaTime;
+                //Debug.Log("High");
+                //ball.AddForce(launchAngle);
+                ball.velocity = launchAngle;
+            }
+            if (ball.transform.position.z <= rb.transform.position.z)
+            {
+                Vector3 launchAngle = new Vector3(-1, 0, -1) * modifier * Time.deltaTime;
+                //Debug.Log("Low");
+                //ball.AddForce(launchAngle);
+                ball.velocity = launchAngle;
+            }
         }
-        modifier += 5;
+
+        modifier += 10;
     }
 }
