@@ -668,6 +668,7 @@ GameObject:
   - component: {fileID: 1309198815}
   - component: {fileID: 1309198814}
   - component: {fileID: 1309198813}
+  - component: {fileID: 1309198816}
   m_Layer: 0
   m_Name: RightGoal
   m_TagString: Untagged
@@ -749,6 +750,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309198811}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1309198816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309198811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5412c07055a4ef54b9de02cdf99f8723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBall: {fileID: 1312246544}
 --- !u!1 &1312246544
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +776,7 @@ GameObject:
   - component: {fileID: 1312246547}
   - component: {fileID: 1312246546}
   - component: {fileID: 1312246550}
+  - component: {fileID: 1312246549}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -843,6 +858,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312246544}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1312246549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312246544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915d75b422a907a4192be1e5114d33b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &1312246550
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -871,6 +898,7 @@ GameObject:
   - component: {fileID: 1790323959}
   - component: {fileID: 1790323958}
   - component: {fileID: 1790323957}
+  - component: {fileID: 1790323960}
   m_Layer: 0
   m_Name: LeftGoal
   m_TagString: Untagged
@@ -952,6 +980,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790323955}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1790323960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790323955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5412c07055a4ef54b9de02cdf99f8723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newBall: {fileID: 1312246544}
 --- !u!1 &1936568249
 GameObject:
   m_ObjectHideFlags: 0
