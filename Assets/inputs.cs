@@ -7,6 +7,7 @@ public class inputs : MonoBehaviour
     public float speed = 10;
     public Transform paddle;
     
+    
     void Update()
     {
         if (Input.GetAxis("Vertical1") != 0 && paddle.name == "PaddleLeft") // detects WS and triggers left
