@@ -16,8 +16,6 @@ public class scoredisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(score.leftScore);
-        Debug.Log(score.rightScore);
         scoreText.text = "Left: " + score.leftScore + " Right: " + score.rightScore;
     }
 }
