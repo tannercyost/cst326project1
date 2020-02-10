@@ -23,6 +23,7 @@ public class score : MonoBehaviour
             leftScore += 1;
             ball.transform.position = new Vector3(0, 0, 0);
         }
+
         Debug.Log("Score -- Left: " + leftScore + " Right: " + rightScore);
 
         if (leftScore >= 11)
