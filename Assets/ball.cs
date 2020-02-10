@@ -5,6 +5,7 @@ using UnityEngine;
 public class ball : MonoBehaviour
 {
     int modifier = 115;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -12,10 +13,9 @@ public class ball : MonoBehaviour
         ball.velocity = Vector3.right * modifier * Time.deltaTime;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Restart()
     {
-        
+        modifier = 115;
     }
     private void OnCollisionEnter(Collision collision)
     {

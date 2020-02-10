@@ -4,41 +4,45 @@ using UnityEngine;
 
 public class score : MonoBehaviour
 {
-    int leftScore = 0;
-    int rightScore = 0;
-    public GameObject newBall;
-    // Start is called before the first frame update
+    public static int leftScore = 0;
+    public static int rightScore = 0;
+    public GameObject ball;
 
     void OnTriggerEnter(Collider col)
     {
         if (transform.name == "LeftGoal")
         {
-            //Destroy(col.gameObject);
-            Destroy(col.gameObject);
             Debug.Log("Right player won.");
             rightScore += 1;
+            ball.transform.position = new Vector3(0, 0, 0);
         }
 
         if (transform.name == "RightGoal")
         {
-            //Destroy(col.gameObject);
-            Destroy(col.gameObject);
             Debug.Log("Left player won.");
             leftScore += 1;
+            ball.transform.position = new Vector3(0, 0, 0);
         }
+
         Debug.Log("Score -- Left: " + leftScore + " Right: " + rightScore);
 
         if (leftScore >= 11)
         {
+            ball.transform.position = new Vector3(0, 0, 0);
             Debug.Log("Game over, left player won.");
+            leftScore = 0;
+            rightScore = 0;
         } 
         else if (rightScore >= 11)
         {
+            ball.transform.position = new Vector3(0, 0, 0);
             Debug.Log("Game over, right player won.");
+            leftScore = 0;
+            rightScore = 0;
         }
         else
         {
-            Instantiate(newBall, new Vector3(0, 0, 0), Quaternion.identity);
+            ball.transform.position = new Vector3(0, 0, 0);
         }
 
     }
