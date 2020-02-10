@@ -16,7 +16,6 @@ public class sound : MonoBehaviour
     {
         if (collision.gameObject.name != "UpperWall" && collision.gameObject.name != "LowerWall" && collision.gameObject.name != "Floor")
         {
-            Debug.Log("collision with ball");
             source.PlayOneShot(colSound, 1F);
         }
     }
