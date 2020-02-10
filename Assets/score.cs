@@ -6,7 +6,7 @@ public class score : MonoBehaviour
 {
     public static int leftScore = 0;
     public static int rightScore = 0;
-    public Ball ball;
+    public GameObject ball;
 
     void OnTriggerEnter(Collider col)
     {
@@ -27,23 +27,21 @@ public class score : MonoBehaviour
 
         if (leftScore >= 11)
         {
-            ball.Restart();
+            ball.transform.position = new Vector3(0, 0, 0);
             Debug.Log("Game over, left player won.");
             leftScore = 0;
             rightScore = 0;
         } 
         else if (rightScore >= 11)
         {
-            ball.Restart();
+            ball.transform.position = new Vector3(0, 0, 0);
             Debug.Log("Game over, right player won.");
             leftScore = 0;
             rightScore = 0;
         }
         else
         {
-            //ball.transform.position = new Vector3(0, 0, 0);
-            Destroy(ball);
-            ball = Instantiate(ball, new Vector3(0, 0, 0), Quaternion.identity);
+            ball.transform.position = new Vector3(0, 0, 0);
         }
 
     }
