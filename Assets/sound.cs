@@ -19,10 +19,4 @@ public class sound : MonoBehaviour
             source.PlayOneShot(colSound, 1F);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
