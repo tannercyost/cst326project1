@@ -16,6 +16,8 @@ public class ball : MonoBehaviour
     public void Restart()
     {
         modifier = 115;
+        Rigidbody ball = transform.gameObject.GetComponent<Rigidbody>();
+        ball.velocity = Vector3.right * modifier * Time.deltaTime;
     }
     private void OnCollisionEnter(Collision collision)
     {

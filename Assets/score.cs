@@ -7,7 +7,7 @@ public class score : MonoBehaviour
     public static int leftScore = 0;
     public static int rightScore = 0;
     public GameObject ball;
-
+    public ball b;
     void OnTriggerEnter(Collider col)
     {
         if (transform.name == "LeftGoal")
@@ -15,6 +15,7 @@ public class score : MonoBehaviour
             Debug.Log("Right player won.");
             rightScore += 1;
             ball.transform.position = new Vector3(0, 0, 0);
+            b.Restart();
         }
 
         if (transform.name == "RightGoal")
@@ -22,6 +23,7 @@ public class score : MonoBehaviour
             Debug.Log("Left player won.");
             leftScore += 1;
             ball.transform.position = new Vector3(0, 0, 0);
+            b.Restart();
         }
 
         Debug.Log("Score -- Left: " + leftScore + " Right: " + rightScore);

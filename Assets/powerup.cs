@@ -15,8 +15,6 @@ public class powerup : MonoBehaviour
         //do something interesting to the ball, paddle, or some other game element
         Rigidbody collision = other.gameObject.GetComponent<Rigidbody>();
         Vector3 vel = collision.velocity;
-
-        Vector3 scaleChange = new Vector3(-0.01f, -0.01f, -0.01f);
-        collision.transform.localScale -= scaleChange;
+        collision.velocity = vel * 2;
     }
 }
