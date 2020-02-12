@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ball : MonoBehaviour
 {
-    int modifier = 115;
+    public int modifier = 115;
 
     // Start is called before the first frame update
     void Awake()
