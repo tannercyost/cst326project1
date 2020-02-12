@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class powerup : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         //do something interesting to the ball, paddle, or some other game element
